@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0A0F">
+<title>Offline — Tanishuv Chat</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #0A0A0F;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    user-select: none;
+  }
+  .container {
+    max-width: 400px;
+    animation: fadeIn 0.6s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE, #FD79A8);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    box-shadow: 0 15px 40px rgba(108, 92, 231, 0.4);
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  h1 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE, #FD79A8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+  }
+  p {
+    font-size: 15px;
+    color: #A0A0AA;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.4);
+  }
+  .btn:active { transform: scale(0.96); }
+  .status {
+    margin-top: 24px;
+    font-size: 12px;
+    color: #666670;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #FF6B6B;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📡</div>
+    <h1>Internet yo'q</h1>
+    <p>Siz offline rejimdasiz.<br>Internetga ulanib, qaytadan urinib ko'ring.</p>
+    <button class="btn" onclick="location.reload()">
+      🔄 Qayta urinish
+    </button>
+    <div class="status">
+      <div class="dot"></div>
+      Offline rejim
+    </div>
+  </div>
+</body>
+</html>

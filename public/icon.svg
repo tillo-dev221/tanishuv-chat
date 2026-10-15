@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B"/>
+      <stop offset="33%" style="stop-color:#FD79A8"/>
+      <stop offset="66%" style="stop-color:#A29BFE"/>
+      <stop offset="100%" style="stop-color:#6C5CE7"/>
+    </linearGradient>
+    <linearGradient id="bubble9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0.85"/>
+    </linearGradient>
+    <filter id="shadow9" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="12" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="512" height="512" rx="120" fill="url(#bg9)"/>
+  
+  <path d="M 0 350 Q 128 300 256 350 T 512 350 L 512 512 L 0 512 Z" 
+        fill="#FFFFFF" opacity="0.08"/>
+  <path d="M 0 400 Q 128 350 256 400 T 512 400 L 512 512 L 0 512 Z" 
+        fill="#FFFFFF" opacity="0.12"/>
+  
+  <circle cx="100" cy="100" r="150" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="420" cy="420" r="120" fill="#FFFFFF" opacity="0.15"/>
+  
+  <g filter="url(#shadow9)">
+    <path d="M 140 180 
+             Q 140 150 170 150 
+             L 342 150 
+             Q 372 150 372 180 
+             L 372 320 
+             Q 372 350 342 350 
+             L 240 350 
+             L 170 400 
+             L 188 350 
+             L 170 350 
+             Q 140 350 140 320 
+             Z" 
+          fill="url(#bubble9)"/>
+    
+    <circle cx="205" cy="250" r="15" fill="#FD79A8"/>
+    <circle cx="256" cy="250" r="15" fill="#A29BFE"/>
+    <circle cx="307" cy="250" r="15" fill="#6C5CE7"/>
+  </g>
+</svg>
