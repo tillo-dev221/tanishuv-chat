@@ -52,6 +52,12 @@ self.addEventListener('activate', event => {
 // So'rovlarni ushlash
 self.addEventListener('fetch', event => {
   const { request } = event;
+  
+  // ✅ FAQAT http va https so'rovlarini qabul qilamiz
+  if (!request.url.startsWith('http')) {
+    return;
+  }
+  
   const url = new URL(request.url);
 
   // API so'rovlarini keshlash shart emas (har doim yangi)
